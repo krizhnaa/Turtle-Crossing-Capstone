@@ -17,6 +17,7 @@ while game_is_on:
     time.sleep(0.1)
     screen.update()
     screen.onkey(player.move, 'Up')
+    car.create_car()
     car.car_move()
     if player.ycor() > 280:
         print("Finished")
