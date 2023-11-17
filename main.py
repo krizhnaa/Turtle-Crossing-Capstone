@@ -8,7 +8,7 @@ screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor('white')
 screen.tracer(0)
-
+car = CarManager()
 score = Scoreboard()
 player = Player()
 screen.listen()
@@ -17,6 +17,7 @@ while game_is_on:
     time.sleep(0.1)
     screen.update()
     screen.onkey(player.move, 'Up')
+    car.car_move()
     if player.ycor() > 280:
         print("Finished")
         score.level_up()
