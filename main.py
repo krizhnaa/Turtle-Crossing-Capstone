@@ -17,3 +17,6 @@ while game_is_on:
     time.sleep(0.1)
     screen.update()
     screen.onkey(player.move, 'Up')
+    if player.ycor() > 280:
+        print("Finished")
+        player.next_level()
