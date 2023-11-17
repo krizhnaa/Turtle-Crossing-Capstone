@@ -9,9 +9,11 @@ screen.setup(width=600, height=600)
 screen.bgcolor('white')
 screen.tracer(0)
 
-player = Player()
 
+player = Player()
+screen.listen()
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
+    screen.onkey(player.move, 'Up')
