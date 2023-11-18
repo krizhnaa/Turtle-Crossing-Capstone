@@ -25,6 +25,7 @@ while game_is_on:
         print("Finished")
         score.level_up()
         player.next_level()
+        car.level_up()
 
     for kar in car.cars:
         if kar.distance(player) < 27:
@@ -32,8 +33,9 @@ while game_is_on:
             score.game_over()
             player.starting_pos()
             car.restart()
-            break
+            game_is_on = False
 
-    score.cleear()
+
+
 
 
