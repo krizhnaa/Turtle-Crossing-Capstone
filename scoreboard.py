@@ -1,3 +1,4 @@
+import time
 from turtle import Turtle
 FONT = ("Courier", 20, "normal")
 
@@ -8,10 +9,10 @@ class Scoreboard(Turtle):
         self.hideturtle()
         self.penup()
         self.level = 1
-        self.goto(x=-200, y=250)
         self.update_score()
 
     def update_score(self):
+        self.goto(x=-200, y=250)
         self.write(f"Level : {self.level}", align='center', font=FONT)
 
     def level_up(self):
@@ -19,6 +20,10 @@ class Scoreboard(Turtle):
         self.clear()
         self.update_score()
 
-    # def game_over(self):
-    #     self.goto(0,0)
-    #     self.write(f"Game Over", align='center', font=FONT)
+    def game_over(self):
+        self.goto(0, 0)
+        self.write("Game Over", align='center', font=FONT)
+
+    def cleear(self):
+        self.clear()
+        self.update_score()

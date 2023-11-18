@@ -18,3 +18,9 @@ class Player(Turtle):
 
     def next_level(self):
         self.goto(STARTING_POSITION)
+
+    def starting_pos(self):
+        self.shape('turtle')
+        self.penup()
+        self.setheading(90)
+        self.goto(STARTING_POSITION)
