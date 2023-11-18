@@ -30,12 +30,12 @@ while game_is_on:
     for kar in car.cars:
         if kar.distance(player) < 27:
             print('Collision')
-            score.game_over()
             player.starting_pos()
             car.restart()
+            score.game_over()
             game_is_on = False
 
 
-
+screen.exitonclick()
 
 
