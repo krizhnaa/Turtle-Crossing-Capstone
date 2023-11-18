@@ -20,7 +20,13 @@ while game_is_on:
     screen.onkey(player.move, 'Up')
     car.create_car()
     car.car_move()
+
     if player.ycor() > 280:
         print("Finished")
         score.level_up()
         player.next_level()
+
+    for kar in car.cars:
+        if kar.distance(player) < 27:
+            print('Collision')
+

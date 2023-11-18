@@ -10,3 +10,4 @@
 ##### <6.2> Adding Movement to it
 ##### <6.3> Generating more turtles
 ##### <6.4> Changing the car behaviour
+# <7> Collision detection when the turtle hits the car
